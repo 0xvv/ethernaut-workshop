@@ -17,3 +17,5 @@
 **Magic Number**: The goal is to build a very small contract that returns 42. I used Huff to build the contract, no need to load the calldata meaning we only need 6 opcodes.
 
 **King**: This an old classic, we simply need to send more money than the prize through a contract that reverts in the fallback function. This prevent anyone from getting the king since the fallback function will be called by `transfer()`.
+
+**Elevator**: This contract can be broken if the function `isLastFloor()` can answer false then true to two consecutive calls. The contract places a lot of trust in the implementation of the `Building` that calls it.
