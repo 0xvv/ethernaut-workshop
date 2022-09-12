@@ -21,3 +21,5 @@
 **Elevator**: This contract can be broken if the function `isLastFloor()` can answer false then true to two consecutive calls. The contract places a lot of trust in the implementation of the `Building` that calls it.
 
 **Coin Flip**: This is a case of false randomness, you can compute the result before calling the function. The best practice is to use a Verifiable Randomness Function, the most popular provider right now is Chainlink.
+
+**Denial**: The `.call()` to an arbitrary contract allows all the gas to be spent, leaving the end of the contract unexecuted. The best practice is to limit the gas forwarded to the other contract.
