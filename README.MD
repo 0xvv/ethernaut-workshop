@@ -25,3 +25,5 @@
 **Denial**: The `.call()` to an arbitrary contract allows all the gas to be spent, leaving the end of the contract unexecuted. The best practice is to limit the gas forwarded to the other contract.
 
 **Naught Coin**: This token contract has a lock on the transfer() function, however it is an ERC20, meaning we can call still use transferFrom() from any other address that was approved to spend the funds and drain the player address.
+
+**Shop**: The buyer can alter the value returned by `price()` depending on the value of `shop.isSold` to set any price.
